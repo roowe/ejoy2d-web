@@ -9,7 +9,9 @@ export function rgba(color: number): Rgba {
 export function colorMul(a: number, b: number) {
   let result = 0;
   for (const shift of [0, 8, 16, 24]) {
-    result |= Math.floor(((a >>> shift) & 255) * ((b >>> shift) & 255) / 255) << shift;
+    result |=
+      Math.floor((((a >>> shift) & 255) * ((b >>> shift) & 255)) / 255) <<
+      shift;
   }
   return result >>> 0;
 }
@@ -17,7 +19,8 @@ export function colorMul(a: number, b: number) {
 export function colorAdd(a: number, b: number) {
   let result = 0;
   for (const shift of [0, 8, 16]) {
-    result |= Math.min(255, ((a >>> shift) & 255) + ((b >>> shift) & 255)) << shift;
+    result |=
+      Math.min(255, ((a >>> shift) & 255) + ((b >>> shift) & 255)) << shift;
   }
   return result >>> 0;
 }

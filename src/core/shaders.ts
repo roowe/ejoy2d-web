@@ -1,5 +1,5 @@
 // Port of ejoy2d/shader.lua; CPU supplies final NDC, so there is no second position offset.
-export type Program = 'normal' | 'gray' | 'color';
+export type Program = "normal" | "gray" | "color";
 export const vertexShader = `#version 300 es
 precision highp float;
 layout(location=0) in vec2 aPosition;
@@ -18,9 +18,9 @@ void main() {
 
 export function fragmentShader(program: Program) {
   const output = {
-    normal: 'outColor = c;',
-    gray: 'outColor = vec4(vec3(dot(c.rgb, vec3(0.299, 0.587, 0.114))), c.a);',
-    color: 'outColor = vec4(vColor.rgb * tex.a, tex.a);',
+    normal: "outColor = c;",
+    gray: "outColor = vec4(vec3(dot(c.rgb, vec3(0.299, 0.587, 0.114))), c.a);",
+    color: "outColor = vec4(vColor.rgb * tex.a, tex.a);",
   }[program];
   return `#version 300 es
 precision highp float;
