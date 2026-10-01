@@ -1,0 +1,16 @@
+{
+  "source": "sample.lua",
+  "objects": 41,
+  "types": {
+    "picture": 34,
+    "animation": 5,
+    "label": 1,
+    "pannel": 1
+  },
+  "matrices": 1,
+  "textureCount": 1,
+  "exports": {
+    "cannon": 26,
+    "mine": 38
+  }
+}

@@ -3,6 +3,7 @@
 > 目标：把 cloudwu/ejoy2d（C + OpenGL ES 2.0 + Lua）的核心 2D 引擎能力，用 **TypeScript + WebGL2** 重写一个**可运行的最小版本（MVP）**，用于学习游戏引擎开发。
 > 定位：**学习项目，不是生产级引擎**。优先保证架构忠实、代码可读、能与原版示例逐帧对照，不追求性能、兼容性和功能完备。
 > 参考源码：`F:\github\ejoy2d`（下文路径均相对于该目录）。
+> 实现状态（2026-09-21）：M0–M7 已落地；实际模块选择、差异与验收记录见 [implementation.md](implementation.md)，运行方法见 [README](../README.md)。M8 保持选做。
 
 ---
 
